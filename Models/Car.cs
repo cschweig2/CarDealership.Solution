@@ -18,6 +18,7 @@ namespace Dealership.Models
       MakeModel = makeModel;
       Price = price;
       Miles = miles;
+      _instances.Add(this);
     }
 
     public static List<Car> GetAll()
