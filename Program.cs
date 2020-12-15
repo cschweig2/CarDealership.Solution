@@ -17,7 +17,7 @@ namespace Dealership
         .UseStartup<Startup>()
         .Build();
 
-      host.Run();
+        host.Run();
     }
   }
 }
