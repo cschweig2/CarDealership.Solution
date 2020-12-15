@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Dealership.Models
 {
@@ -9,7 +10,7 @@ namespace Dealership.Models
     public string MakeModel { get; set; }
     public int Price { get; set; }
     public int Miles { get; set; }
-
+    private static List<Car> _instances = new List<Car> {};
     // Constructor
 
     public Car(string makeModel, int price, int miles)
@@ -17,6 +18,11 @@ namespace Dealership.Models
       MakeModel = makeModel;
       Price = price;
       Miles = miles;
+    }
+
+    public static List<Car> GetAll()
+    {
+      return _instances;
     }
 
     public static string MakeSound(string sound)
